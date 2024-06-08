@@ -1,8 +1,11 @@
 # InsightUBC
 ## Introduction
-InsightUBC is a full-stack application which user can query on classroom information and historical course data.
 
 <img src="screenshot.jpg" width=800>
+
+InsightUBC is a full-stack application which user can query on classroom information and historical course data.
+
+
 
 ## Requirement
 - Node.js v18
