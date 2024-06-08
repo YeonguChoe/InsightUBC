@@ -1,0 +1,39 @@
+{
+	"title": "In sections dataset sections, find entries whose Department ends with \"sc\" and Average is greater than 96; show ID, Department and UUID.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "*sc"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "559",
+			"sections_dept": "musc",
+			"sections_uuid": "78041"
+		},
+		{
+			"sections_id": "559",
+			"sections_dept": "musc",
+			"sections_uuid": "78042"
+		}
+	]
+}

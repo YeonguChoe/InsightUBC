@@ -1,0 +1,15 @@
+{
+	"title": "In sections dataset sections, find entries whose Department begins with \"c\"; show .",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "c*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": []
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

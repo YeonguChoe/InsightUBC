@@ -1,0 +1,59 @@
+{
+	"title": "WildcardQuery",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 97
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "c*"
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_id",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "cnps",
+			"sections_id": "574",
+			"sections_avg": 97.47
+		},
+		{
+			"sections_dept": "cnps",
+			"sections_id": "574",
+			"sections_avg": 97.47
+		},
+		{
+			"sections_dept": "crwr",
+			"sections_id": "599",
+			"sections_avg": 98
+		},
+		{
+			"sections_dept": "crwr",
+			"sections_id": "599",
+			"sections_avg": 98
+		},
+		{
+			"sections_dept": "cnps",
+			"sections_id": "574",
+			"sections_avg": 99.19
+		}
+	]
+}

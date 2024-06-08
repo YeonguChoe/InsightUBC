@@ -1,0 +1,18 @@
+{
+	"title": "In sections dataset sections, find entries whose Department is \"c*sc\"; show Average and Department.",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "c*sc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg",
+				"sections_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

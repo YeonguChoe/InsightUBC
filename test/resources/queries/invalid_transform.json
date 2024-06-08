@@ -1,0 +1,38 @@
+{
+	"title": "In rooms dataset rooms grouped by Seats, find entries whose Full Name includes \"\"; show Full Name, Short Name, Seats and minSeats, where minSeats is the MIN of Seats; sort in descending order by Seats.",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_fullname": "**"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"rooms_seats",
+				"minSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"rooms_seats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_seats"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"MIN": "room_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

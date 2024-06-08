@@ -1,0 +1,13 @@
+{
+	"title": "should return false with invalid type for WHERE",
+	"input": {
+		"WHERE": "{'IS': {'sections_dept': 'anth'}",
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": false
+}

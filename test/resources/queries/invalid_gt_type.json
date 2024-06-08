@@ -1,0 +1,17 @@
+{
+	"title": "In sections dataset sections, find entries whose Average is greater than ; show Average.",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": ""
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

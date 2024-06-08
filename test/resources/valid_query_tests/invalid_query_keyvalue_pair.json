@@ -1,0 +1,28 @@
+{
+	"title": "should return false on queries with invalid query key-value pair",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_id": 132
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": false
+}

@@ -1,0 +1,17 @@
+{
+	"title": "should return false when GT is provided an empty object value",
+	"input": {
+		"WHERE": {
+			"GT": {}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": false
+}

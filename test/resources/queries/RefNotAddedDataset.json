@@ -1,0 +1,17 @@
+{
+  "title": "RefNotAddedDataset",
+  "input": {
+    "WHERE": {
+        "course_avg": 66
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "course_dept",
+        "course_avg"
+      ],
+      "ORDER": "course_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

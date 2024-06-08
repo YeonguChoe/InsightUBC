@@ -1,0 +1,21 @@
+{
+	"title": "In rooms dataset sections, find entries whose sections_enrolled is greater than 30; show sections_id, sections_avg, sections_dept and sections_pass; sort in ascending order by sections_pass.",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_enrolled": 30
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_avg",
+				"sections_dept",
+				"sections_pass"
+			],
+			"ORDER": "sections_pass"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

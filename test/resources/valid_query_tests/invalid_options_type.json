@@ -1,0 +1,13 @@
+{
+	"title": "should return false when OPTIONS is in the wrong type",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "c*"
+			}
+		},
+		"OPTIONS": []
+	},
+	"errorExpected": false,
+	"expected": false
+}

@@ -1,0 +1,1502 @@
+{
+	"title": "In rooms dataset rooms grouped by Full Name, Name and Furniture, find entries whose Furniture includes \"Chairs\" and Seats is less than 100; show Full Name, Name, minSeats and Furniture, where minSeats is the AVG of Seats; sort in ascending order by minSeats.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Chairs*"
+					}
+				},
+				{
+					"LT": {
+						"rooms_seats": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_name",
+				"minSeats",
+				"rooms_furniture"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"minSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_fullname",
+				"rooms_name",
+				"rooms_furniture"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"AVG": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360A",
+			"minSeats": 6,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360B",
+			"minSeats": 6,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3112",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3114",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3115",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3118",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3120",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3122",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3124",
+			"minSeats": 7,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_192",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_193",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_194",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_195",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_263",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_266",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360C",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360D",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360E",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360F",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360G",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360H",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360J",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360K",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360L",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_360M",
+			"minSeats": 8,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_265",
+			"minSeats": 10,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G53",
+			"minSeats": 10,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G55",
+			"minSeats": 10,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G59",
+			"minSeats": 10,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_264",
+			"minSeats": 12,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Jack Bell Building for the School of Social Work",
+			"rooms_name": "SOWK_122",
+			"minSeats": 12,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "School of Population and Public Health",
+			"rooms_name": "SPPH_B136",
+			"minSeats": 12,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G57",
+			"minSeats": 12,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G65",
+			"minSeats": 12,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3116",
+			"minSeats": 14,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "School of Population and Public Health",
+			"rooms_name": "SPPH_B138",
+			"minSeats": 14,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G44",
+			"minSeats": 14,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Biological Sciences",
+			"rooms_name": "BIOL_1503",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Biological Sciences",
+			"rooms_name": "BIOL_2519",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_232",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_332",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_432",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_460",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Jack Bell Building for the School of Social Work",
+			"rooms_name": "SOWK_324",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Jack Bell Building for the School of Social Work",
+			"rooms_name": "SOWK_326",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_4068",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "School of Population and Public Health",
+			"rooms_name": "SPPH_B112",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G66",
+			"minSeats": 16,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B312",
+			"minSeats": 18,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1402",
+			"minSeats": 18,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_name": "ALRD_112",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_name": "ALRD_113",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Auditorium Annex",
+			"rooms_name": "AUDX_142",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1615",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1617",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Frederic Lasserre",
+			"rooms_name": "LASR_211",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Frederic Lasserre",
+			"rooms_name": "LASR_5C",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_339",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1021",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1022",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1023",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1024",
+			"minSeats": 20,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Auditorium Annex",
+			"rooms_name": "AUDX_157",
+			"minSeats": 21,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Geography",
+			"rooms_name": "GEOG_242",
+			"minSeats": 21,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B216",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B316",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D209",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D214",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D306",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D315",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D319",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D325",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Civil and Mechanical Engineering",
+			"rooms_name": "CEME_1210",
+			"minSeats": 22,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Brock Hall Annex",
+			"rooms_name": "BRKX_2367",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B219",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B319",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D216",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D228",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1002",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1611",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_156",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_157",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_158",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_191",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_358",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1020",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_204A",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_210",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1009",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1011",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1215",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1302",
+			"minSeats": 24,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_3002",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_3016",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_3058",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_4002",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_4004",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_4016",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_4058",
+			"minSeats": 25,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_name": "ANSO_202",
+			"minSeats": 26,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B142",
+			"minSeats": 26,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Civil and Mechanical Engineering",
+			"rooms_name": "CEME_1206",
+			"minSeats": 26,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_106",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_108",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_110",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_306",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_308",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_310",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_406",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_408",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_410",
+			"minSeats": 27,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Food, Nutrition and Health",
+			"rooms_name": "FNH_30",
+			"minSeats": 28,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "School of Population and Public Health",
+			"rooms_name": "SPPH_143",
+			"minSeats": 28,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D205",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D207",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D221",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D229",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hennings",
+			"rooms_name": "HENN_301",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hennings",
+			"rooms_name": "HENN_302",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "School of Population and Public Health",
+			"rooms_name": "SPPH_B108",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_name": "UCLL_101",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_B75",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_G41",
+			"minSeats": 30,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D323",
+			"minSeats": 31,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_293",
+			"minSeats": 32,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_437",
+			"minSeats": 32,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_256",
+			"minSeats": 32,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_260",
+			"minSeats": 32,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_name": "ANSO_203",
+			"minSeats": 33,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Civil and Mechanical Engineering",
+			"rooms_name": "CEME_1212",
+			"minSeats": 34,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_205",
+			"minSeats": 34,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Frank Forward",
+			"rooms_name": "FORW_519",
+			"minSeats": 35,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_292",
+			"minSeats": 35,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1613",
+			"minSeats": 36,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hennings",
+			"rooms_name": "HENN_304",
+			"minSeats": 36,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_name": "ANSO_205",
+			"minSeats": 37,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_296",
+			"minSeats": 37,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1328",
+			"minSeats": 38,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Geography",
+			"rooms_name": "GEOG_214",
+			"minSeats": 39,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B318",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D201",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D204",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hugh Dempster Pavilion",
+			"rooms_name": "DMP_101",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hugh Dempster Pavilion",
+			"rooms_name": "DMP_201",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_185",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacLeod",
+			"rooms_name": "MCLD_220",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1003",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1004",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_1005",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_200",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_201",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_202",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_203",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_204",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_206",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_207",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_208",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1001",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1002",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Ponderosa Commons: Oak House",
+			"rooms_name": "PCOH_1003",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Robert F. Osborne Centre",
+			"rooms_name": "OSBO_203A",
+			"minSeats": 40,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_235",
+			"minSeats": 41,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_237",
+			"minSeats": 41,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_335",
+			"minSeats": 41,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B141",
+			"minSeats": 42,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Geography",
+			"rooms_name": "GEOG_201",
+			"minSeats": 42,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Leonard S. Klinck (also known as CSCI)",
+			"rooms_name": "LSK_462",
+			"minSeats": 42,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_name": "ALRD_B101",
+			"minSeats": 44,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Frank Forward",
+			"rooms_name": "FORW_317",
+			"minSeats": 44,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_354",
+			"minSeats": 44,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_434",
+			"minSeats": 44,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Civil and Mechanical Engineering",
+			"rooms_name": "CEME_1215",
+			"minSeats": 45,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_154",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_105",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_107",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_109",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_305",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_307",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_309",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_405",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_407",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "West Mall Swing Space",
+			"rooms_name": "SWNG_409",
+			"minSeats": 47,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Mathematics",
+			"rooms_name": "MATH_104",
+			"minSeats": 48,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Mathematics",
+			"rooms_name": "MATH_203",
+			"minSeats": 48,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_name": "UCLL_107",
+			"minSeats": 48,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_name": "ALRD_121",
+			"minSeats": 50,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Earth and Ocean Sciences - Main",
+			"rooms_name": "EOSM_135",
+			"minSeats": 50,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Iona Building",
+			"rooms_name": "IONA_633",
+			"minSeats": 50,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Irving K Barber Learning Centre",
+			"rooms_name": "IBLC_155",
+			"minSeats": 50,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_435",
+			"minSeats": 53,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hebb",
+			"rooms_name": "HEBB_10",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hebb",
+			"rooms_name": "HEBB_12",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hebb",
+			"rooms_name": "HEBB_13",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_037",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_039",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_291",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_295",
+			"minSeats": 54,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_name": "UCLL_103",
+			"minSeats": 55,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B208",
+			"minSeats": 56,
+			"rooms_furniture": "Classroom-Fixed Tables/Moveable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_350",
+			"minSeats": 58,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Chemical and Biological Engineering Building",
+			"rooms_name": "CHBE_103",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Geography",
+			"rooms_name": "GEOG_101",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Geography",
+			"rooms_name": "GEOG_147",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_234",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_334",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "MacLeod",
+			"rooms_name": "MCLD_214",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "MacLeod",
+			"rooms_name": "MCLD_242",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Mathematics",
+			"rooms_name": "MATH_102",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Neville Scarfe",
+			"rooms_name": "SCRF_209",
+			"minSeats": 60,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Civil and Mechanical Engineering",
+			"rooms_name": "CEME_1204",
+			"minSeats": 62,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Frank Forward",
+			"rooms_name": "FORW_303",
+			"minSeats": 63,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D217",
+			"minSeats": 65,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D218",
+			"minSeats": 65,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D219",
+			"minSeats": 65,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_D222",
+			"minSeats": 65,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1001",
+			"minSeats": 65,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Forest Sciences Centre",
+			"rooms_name": "FSC_1003",
+			"minSeats": 65,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "School of Population and Public Health",
+			"rooms_name": "SPPH_B151",
+			"minSeats": 66,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_243",
+			"minSeats": 68,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_343",
+			"minSeats": 68,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_345",
+			"minSeats": 68,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Brock Hall Annex",
+			"rooms_name": "BRKX_2365",
+			"minSeats": 70,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_241",
+			"minSeats": 70,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_347",
+			"minSeats": 70,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Geography",
+			"rooms_name": "GEOG_212",
+			"minSeats": 72,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "MacMillan",
+			"rooms_name": "MCML_160",
+			"minSeats": 72,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_name": "ORCH_3074",
+			"minSeats": 72,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Pharmaceutical Sciences Building",
+			"rooms_name": "PHRM_3208",
+			"minSeats": 72,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Leonard S. Klinck (also known as CSCI)",
+			"rooms_name": "LSK_460",
+			"minSeats": 75,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Biological Sciences",
+			"rooms_name": "BIOL_2200",
+			"minSeats": 76,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B213",
+			"minSeats": 78,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B215",
+			"minSeats": 78,
+			"rooms_furniture": "Classroom-Fixed Tables/Moveable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B313",
+			"minSeats": 78,
+			"rooms_furniture": "Classroom-Fixed Tables/Moveable Chairs"
+		},
+		{
+			"rooms_fullname": "Buchanan",
+			"rooms_name": "BUCH_B315",
+			"minSeats": 78,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Earth Sciences Building",
+			"rooms_name": "ESB_2012",
+			"minSeats": 80,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Frederic Lasserre",
+			"rooms_name": "LASR_102",
+			"minSeats": 80,
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs"
+		},
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_name": "ANGU_254",
+			"minSeats": 80,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Hugh Dempster Pavilion",
+			"rooms_name": "DMP_301",
+			"minSeats": 80,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "MacLeod",
+			"rooms_name": "MCLD_254",
+			"minSeats": 84,
+			"rooms_furniture": "Classroom-Movable Tables & Chairs"
+		},
+		{
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"rooms_name": "WOOD_3",
+			"minSeats": 88,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_name": "ALRD_105",
+			"minSeats": 94,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		},
+		{
+			"rooms_fullname": "Chemical and Biological Engineering Building",
+			"rooms_name": "CHBE_102",
+			"minSeats": 94,
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs"
+		}
+	]
+}

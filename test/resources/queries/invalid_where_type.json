@@ -1,0 +1,13 @@
+{
+	"title": "In rooms dataset {'IS': {'sections, find entries whose undefined; show sections_id.",
+	"input": {
+		"WHERE": "{'IS': {'sections_dept': 'anth'}",
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

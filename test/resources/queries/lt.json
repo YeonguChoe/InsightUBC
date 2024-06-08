@@ -1,0 +1,94 @@
+{
+	"title": "In sections dataset sections, find entries whose Average is less than 40; show ID, Average, Department and Pass; sort in ascending order by Average.",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"sections_avg": 40
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_avg",
+				"sections_dept",
+				"sections_pass"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "100",
+			"sections_avg": 0,
+			"sections_dept": "lfs",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "100",
+			"sections_avg": 0,
+			"sections_dept": "lfs",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "202",
+			"sections_avg": 0,
+			"sections_dept": "frst",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "475",
+			"sections_avg": 1,
+			"sections_dept": "wood",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "330",
+			"sections_avg": 4,
+			"sections_dept": "busi",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "330",
+			"sections_avg": 4,
+			"sections_dept": "busi",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "362",
+			"sections_avg": 4.5,
+			"sections_dept": "fopr",
+			"sections_pass": 0
+		},
+		{
+			"sections_id": "403",
+			"sections_avg": 33,
+			"sections_dept": "civl",
+			"sections_pass": 1
+		},
+		{
+			"sections_id": "120",
+			"sections_avg": 33.2,
+			"sections_dept": "phil",
+			"sections_pass": 5
+		},
+		{
+			"sections_id": "102",
+			"sections_avg": 34,
+			"sections_dept": "hist",
+			"sections_pass": 1
+		},
+		{
+			"sections_id": "172",
+			"sections_avg": 39.03,
+			"sections_dept": "educ",
+			"sections_pass": 39
+		},
+		{
+			"sections_id": "172",
+			"sections_avg": 39.03,
+			"sections_dept": "educ",
+			"sections_pass": 39
+		}
+	]
+}

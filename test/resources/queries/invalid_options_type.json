@@ -1,0 +1,13 @@
+{
+	"title": "{\"WHERE\":{\"IS\":{\"sections_dept\":\"c*\"}},\"OPTIONS\":[]}",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "c*"
+			}
+		},
+		"OPTIONS": []
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

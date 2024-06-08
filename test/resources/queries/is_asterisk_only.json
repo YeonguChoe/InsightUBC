@@ -1,0 +1,579 @@
+{
+	"title": "In sections dataset sections, find entries whose ID includes \"\" and Average is greater than 96; show ID, Department and UUID.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_id": "*"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "329",
+			"sections_dept": "adhe",
+			"sections_uuid": "68539"
+		},
+		{
+			"sections_id": "550",
+			"sections_dept": "arst",
+			"sections_uuid": "26287"
+		},
+		{
+			"sections_id": "550",
+			"sections_dept": "arst",
+			"sections_uuid": "26288"
+		},
+		{
+			"sections_id": "568",
+			"sections_dept": "audi",
+			"sections_uuid": "61632"
+		},
+		{
+			"sections_id": "568",
+			"sections_dept": "audi",
+			"sections_uuid": "61633"
+		},
+		{
+			"sections_id": "508",
+			"sections_dept": "civl",
+			"sections_uuid": "84887"
+		},
+		{
+			"sections_id": "508",
+			"sections_dept": "civl",
+			"sections_uuid": "84888"
+		},
+		{
+			"sections_id": "574",
+			"sections_dept": "cnps",
+			"sections_uuid": "26777"
+		},
+		{
+			"sections_id": "574",
+			"sections_dept": "cnps",
+			"sections_uuid": "87779"
+		},
+		{
+			"sections_id": "574",
+			"sections_dept": "cnps",
+			"sections_uuid": "87780"
+		},
+		{
+			"sections_id": "584",
+			"sections_dept": "cnps",
+			"sections_uuid": "33373"
+		},
+		{
+			"sections_id": "584",
+			"sections_dept": "cnps",
+			"sections_uuid": "33375"
+		},
+		{
+			"sections_id": "599",
+			"sections_dept": "crwr",
+			"sections_uuid": "26255"
+		},
+		{
+			"sections_id": "599",
+			"sections_dept": "crwr",
+			"sections_uuid": "46405"
+		},
+		{
+			"sections_id": "599",
+			"sections_dept": "crwr",
+			"sections_uuid": "46412"
+		},
+		{
+			"sections_id": "520",
+			"sections_dept": "edst",
+			"sections_uuid": "59203"
+		},
+		{
+			"sections_id": "520",
+			"sections_dept": "edst",
+			"sections_uuid": "59204"
+		},
+		{
+			"sections_id": "500",
+			"sections_dept": "educ",
+			"sections_uuid": "50495"
+		},
+		{
+			"sections_id": "541",
+			"sections_dept": "eece",
+			"sections_uuid": "10235"
+		},
+		{
+			"sections_id": "541",
+			"sections_dept": "eece",
+			"sections_uuid": "10236"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "3148"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "3149"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "44372"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "44373"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "33779"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "33780"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "33781"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "35870"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "35871"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "76254"
+		},
+		{
+			"sections_id": "432",
+			"sections_dept": "epse",
+			"sections_uuid": "38152"
+		},
+		{
+			"sections_id": "432",
+			"sections_dept": "epse",
+			"sections_uuid": "38153"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "3181"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "6320"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "28943"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "29255"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "29256"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "44816"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "44817"
+		},
+		{
+			"sections_id": "505",
+			"sections_dept": "epse",
+			"sections_uuid": "76285"
+		},
+		{
+			"sections_id": "519",
+			"sections_dept": "epse",
+			"sections_uuid": "49677"
+		},
+		{
+			"sections_id": "519",
+			"sections_dept": "epse",
+			"sections_uuid": "49678"
+		},
+		{
+			"sections_id": "526",
+			"sections_dept": "epse",
+			"sections_uuid": "44426"
+		},
+		{
+			"sections_id": "526",
+			"sections_dept": "epse",
+			"sections_uuid": "44427"
+		},
+		{
+			"sections_id": "534",
+			"sections_dept": "epse",
+			"sections_uuid": "76309"
+		},
+		{
+			"sections_id": "534",
+			"sections_dept": "epse",
+			"sections_uuid": "76310"
+		},
+		{
+			"sections_id": "534",
+			"sections_dept": "epse",
+			"sections_uuid": "76311"
+		},
+		{
+			"sections_id": "549",
+			"sections_dept": "epse",
+			"sections_uuid": "3228"
+		},
+		{
+			"sections_id": "596",
+			"sections_dept": "epse",
+			"sections_uuid": "86962"
+		},
+		{
+			"sections_id": "596",
+			"sections_dept": "epse",
+			"sections_uuid": "86963"
+		},
+		{
+			"sections_id": "606",
+			"sections_dept": "epse",
+			"sections_uuid": "86966"
+		},
+		{
+			"sections_id": "521",
+			"sections_dept": "etec",
+			"sections_uuid": "45905"
+		},
+		{
+			"sections_id": "521",
+			"sections_dept": "etec",
+			"sections_uuid": "45906"
+		},
+		{
+			"sections_id": "333",
+			"sections_dept": "fipr",
+			"sections_uuid": "75176"
+		},
+		{
+			"sections_id": "333",
+			"sections_dept": "fipr",
+			"sections_uuid": "75177"
+		},
+		{
+			"sections_id": "562",
+			"sections_dept": "frst",
+			"sections_uuid": "55026"
+		},
+		{
+			"sections_id": "562",
+			"sections_dept": "frst",
+			"sections_uuid": "55027"
+		},
+		{
+			"sections_id": "565",
+			"sections_dept": "kin",
+			"sections_uuid": "59539"
+		},
+		{
+			"sections_id": "565",
+			"sections_dept": "kin",
+			"sections_uuid": "59540"
+		},
+		{
+			"sections_id": "575",
+			"sections_dept": "libr",
+			"sections_uuid": "77290"
+		},
+		{
+			"sections_id": "575",
+			"sections_dept": "libr",
+			"sections_uuid": "77291"
+		},
+		{
+			"sections_id": "502",
+			"sections_dept": "math",
+			"sections_uuid": "5351"
+		},
+		{
+			"sections_id": "502",
+			"sections_dept": "math",
+			"sections_uuid": "5352"
+		},
+		{
+			"sections_id": "516",
+			"sections_dept": "math",
+			"sections_uuid": "90206"
+		},
+		{
+			"sections_id": "516",
+			"sections_dept": "math",
+			"sections_uuid": "90207"
+		},
+		{
+			"sections_id": "525",
+			"sections_dept": "math",
+			"sections_uuid": "32014"
+		},
+		{
+			"sections_id": "525",
+			"sections_dept": "math",
+			"sections_uuid": "32015"
+		},
+		{
+			"sections_id": "527",
+			"sections_dept": "math",
+			"sections_uuid": "5373"
+		},
+		{
+			"sections_id": "527",
+			"sections_dept": "math",
+			"sections_uuid": "5374"
+		},
+		{
+			"sections_id": "532",
+			"sections_dept": "math",
+			"sections_uuid": "73165"
+		},
+		{
+			"sections_id": "532",
+			"sections_dept": "math",
+			"sections_uuid": "73166"
+		},
+		{
+			"sections_id": "541",
+			"sections_dept": "math",
+			"sections_uuid": "73173"
+		},
+		{
+			"sections_id": "541",
+			"sections_dept": "math",
+			"sections_uuid": "73174"
+		},
+		{
+			"sections_id": "545",
+			"sections_dept": "math",
+			"sections_uuid": "4011"
+		},
+		{
+			"sections_id": "545",
+			"sections_dept": "math",
+			"sections_uuid": "4012"
+		},
+		{
+			"sections_id": "589",
+			"sections_dept": "math",
+			"sections_uuid": "34240"
+		},
+		{
+			"sections_id": "101",
+			"sections_dept": "midw",
+			"sections_uuid": "17267"
+		},
+		{
+			"sections_id": "101",
+			"sections_dept": "midw",
+			"sections_uuid": "17268"
+		},
+		{
+			"sections_id": "393",
+			"sections_dept": "mine",
+			"sections_uuid": "67760"
+		},
+		{
+			"sections_id": "564",
+			"sections_dept": "mtrl",
+			"sections_uuid": "2667"
+		},
+		{
+			"sections_id": "564",
+			"sections_dept": "mtrl",
+			"sections_uuid": "2668"
+		},
+		{
+			"sections_id": "559",
+			"sections_dept": "musc",
+			"sections_uuid": "78041"
+		},
+		{
+			"sections_id": "559",
+			"sections_dept": "musc",
+			"sections_uuid": "78042"
+		},
+		{
+			"sections_id": "509",
+			"sections_dept": "nurs",
+			"sections_uuid": "15343"
+		},
+		{
+			"sections_id": "509",
+			"sections_dept": "nurs",
+			"sections_uuid": "15344"
+		},
+		{
+			"sections_id": "509",
+			"sections_dept": "nurs",
+			"sections_uuid": "73638"
+		},
+		{
+			"sections_id": "509",
+			"sections_dept": "nurs",
+			"sections_uuid": "73639"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "47427"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "47428"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "73665"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "73666"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "88151"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "88152"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "96250"
+		},
+		{
+			"sections_id": "578",
+			"sections_dept": "nurs",
+			"sections_uuid": "96251"
+		},
+		{
+			"sections_id": "591",
+			"sections_dept": "nurs",
+			"sections_uuid": "93115"
+		},
+		{
+			"sections_id": "591",
+			"sections_dept": "nurs",
+			"sections_uuid": "93116"
+		},
+		{
+			"sections_id": "591",
+			"sections_dept": "nurs",
+			"sections_uuid": "96261"
+		},
+		{
+			"sections_id": "591",
+			"sections_dept": "nurs",
+			"sections_uuid": "96262"
+		},
+		{
+			"sections_id": "595",
+			"sections_dept": "plan",
+			"sections_uuid": "57511"
+		},
+		{
+			"sections_id": "595",
+			"sections_dept": "plan",
+			"sections_uuid": "57512"
+		},
+		{
+			"sections_id": "549",
+			"sections_dept": "psyc",
+			"sections_uuid": "54846"
+		},
+		{
+			"sections_id": "505",
+			"sections_dept": "sowk",
+			"sections_uuid": "86023"
+		},
+		{
+			"sections_id": "505",
+			"sections_dept": "sowk",
+			"sections_uuid": "86024"
+		},
+		{
+			"sections_id": "551",
+			"sections_dept": "sowk",
+			"sections_uuid": "43325"
+		},
+		{
+			"sections_id": "200",
+			"sections_dept": "spph",
+			"sections_uuid": "65066"
+		},
+		{
+			"sections_id": "300",
+			"sections_dept": "spph",
+			"sections_uuid": "65069"
+		},
+		{
+			"sections_id": "300",
+			"sections_dept": "spph",
+			"sections_uuid": "65070"
+		},
+		{
+			"sections_id": "515",
+			"sections_dept": "spph",
+			"sections_uuid": "68029"
+		},
+		{
+			"sections_id": "515",
+			"sections_dept": "spph",
+			"sections_uuid": "68030"
+		}
+	]
+}

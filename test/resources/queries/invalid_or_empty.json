@@ -1,0 +1,17 @@
+{
+	"title": "In sections dataset sections, find entries whose ; show ID, Department and UUID.",
+	"input": {
+		"WHERE": {
+			"OR": []
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

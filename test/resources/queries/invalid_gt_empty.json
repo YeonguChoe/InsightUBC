@@ -1,0 +1,17 @@
+{
+	"title": "{\"WHERE\":{\"GT\":{}},\"OPTIONS\":{\"COLUMNS\":[\"sections_id\",\"sections_dept\",\"sections_uuid\"]}}",
+	"input": {
+		"WHERE": {
+			"GT": {}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

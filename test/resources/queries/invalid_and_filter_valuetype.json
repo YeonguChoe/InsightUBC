@@ -1,0 +1,28 @@
+{
+	"title": "{\"WHERE\":{\"AND\":[{\"IS\":{\"sections_id\":132}},{\"GT\":{\"sections_avg\":96}}]},\"OPTIONS\":{\"COLUMNS\":[\"sections_id\",\"sections_dept\",\"sections_uuid\"]}}",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_id": 132
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

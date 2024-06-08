@@ -1,0 +1,17 @@
+{
+	"title": "In sections dataset sections, find entries whose Year is greater than 2016; show Department.",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_year": 2016
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"section_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

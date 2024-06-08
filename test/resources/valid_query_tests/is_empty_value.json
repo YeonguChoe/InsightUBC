@@ -1,0 +1,17 @@
+{
+	"title": "should return true",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": ""
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": true
+}

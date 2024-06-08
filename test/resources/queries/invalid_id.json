@@ -1,0 +1,21 @@
+{
+	"title": "In sections dataset ubc, find entries whose Average is greater than 70; show ID, Average, Department and Pass; sort in ascending order by Pass.",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"ubc_avg": 70
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_avg",
+				"sections_dept",
+				"sections_pass"
+			],
+			"ORDER": "sections_pass"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

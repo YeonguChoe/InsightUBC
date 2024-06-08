@@ -1,0 +1,17 @@
+{
+	"title": "In sections dataset sections, find entries whose Department is \"\"; show Average.",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": ""
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

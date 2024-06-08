@@ -1,0 +1,19 @@
+{
+	"title": "should return false on invalid comparator value",
+	"input": {
+		"WHERE": {
+			"OR": {
+				"sections_avg": 66
+			}
+		  },
+		  "OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+	  }
+	},
+	"errorExpected": false,
+	"expected": false
+}

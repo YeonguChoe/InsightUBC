@@ -1,0 +1,21 @@
+{
+	"title": "should return false with an invalid query key",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_enrolled": 30
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_avg",
+				"sections_dept",
+				"sections_pass"
+			],
+			"ORDER": "sections_pass"
+		}
+	},
+	"errorExpected": false,
+	"expected": false
+}

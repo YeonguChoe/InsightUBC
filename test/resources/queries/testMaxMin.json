@@ -1,0 +1,113 @@
+{
+	"title": "In sections dataset sections grouped by ID, Instructor and Title, find entries whose Department is \"cpsc\" and ID is \"210\"; show Instructor, minPass, maxFail, Title and ID, where minPass is the MIN of Pass and maxFail is the MAX of Fail.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "cpsc"
+					}
+				},
+				{
+					"IS": {
+						"sections_id": "210"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_instructor",
+				"minPass",
+				"maxFail",
+				"sections_title",
+				"sections_id"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_id",
+				"sections_instructor",
+				"sections_title"
+			],
+			"APPLY": [
+				{
+					"minPass": {
+						"MIN": "sections_pass"
+					}
+				},
+				{
+					"maxFail": {
+						"MAX": "sections_fail"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_instructor": "baniassad, elisa",
+			"minPass": 40,
+			"maxFail": 15,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "carter, paul martin",
+			"minPass": 7,
+			"maxFail": 21,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "murphy, gail",
+			"minPass": 10,
+			"maxFail": 13,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "",
+			"minPass": 10,
+			"maxFail": 76,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "allen, meghan",
+			"minPass": 23,
+			"maxFail": 12,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "beschastnikh, ivan",
+			"minPass": 112,
+			"maxFail": 5,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "eiselt, kurt",
+			"minPass": 78,
+			"maxFail": 11,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "hutchinson, norman",
+			"minPass": 71,
+			"maxFail": 18,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		},
+		{
+			"sections_instructor": "feeley, michael",
+			"minPass": 21,
+			"maxFail": 10,
+			"sections_title": "sftwr constructn",
+			"sections_id": "210"
+		}
+	]
+}

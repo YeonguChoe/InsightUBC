@@ -1,0 +1,62 @@
+{
+	"title": "In sections dataset sections grouped by ID, find entries whose ID is \"210\" or ID is \"310\"; show ID, maxAvg and minAvg, where maxAvg is the MAX of Average and minAvg is the MAX of Average; sort in ascending order by ID.",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"IS": {
+						"sections_id": "210"
+					}
+				},
+				{
+					"IS": {
+						"sections_id": "310"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"maxAvg",
+				"minAvg"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"sections_id"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_id"
+			],
+			"APPLY": [
+				{
+					"maxAvg": {
+						"MAX": "sections_avg"
+					}
+				},
+				{
+					"minAvg": {
+						"MAX": "sections_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "210",
+			"maxAvg": 89.65,
+			"minAvg": 89.65
+		},
+		{
+			"sections_id": "310",
+			"maxAvg": 89.46,
+			"minAvg": 89.46
+		}
+	]
+}

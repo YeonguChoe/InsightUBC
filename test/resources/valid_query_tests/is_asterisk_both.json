@@ -1,0 +1,28 @@
+{
+	"title": "should return true for two asterisk on the string for IS",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "*p*"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": true
+}

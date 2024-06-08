@@ -1,0 +1,49 @@
+{
+	"title": "In sections dataset sections grouped by ID, Instructor and Title, find entries whose Department is \"cpsc\" and ID is \"210\"; show Instructor, minPass, maxFail, Title and ID, where minPass is the MIN of Pass and maxFail is the MAX of Fail.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "cpsc"
+					}
+				},
+				{
+					"IS": {
+						"sections_id": "210"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_instructor",
+				"minPass",
+				"maxFail",
+				"sections_title",
+				"sections_id"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_id",
+				"sections_instructor",
+				"sections_title"
+			],
+			"APPLY": [
+				{
+					"minPass": {
+						"MIN": "rooms_pass"
+					}
+				},
+				{
+					"maxFail": {
+						"MAX": "sections_fail"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

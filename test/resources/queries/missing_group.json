@@ -1,0 +1,51 @@
+{
+	"title": "{\"WHERE\":{\"OR\":[{\"IS\":{\"sections_id\":\"210\"}},{\"IS\":{\"sections_id\":\"310\"}}]},\"OPTIONS\":{\"COLUMNS\":[\"sections_id\",\"maxAvg\",\"minAvg\"],\"ORDER\":{\"dir\":\"UP\",\"keys\":[\"sections_id\"]}},\"TRANSFORMATIONS\":{\"GROP\":[\"sections_id\"],\"APPLY\":[{\"maxAvg\":{\"MAX\":\"sections_avg\"}},{\"minAvg\":{\"MIN\":\"sections_avg\"}}]}}",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"IS": {
+						"sections_id": "210"
+					}
+				},
+				{
+					"IS": {
+						"sections_id": "310"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"maxAvg",
+				"minAvg"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"sections_id"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROP": [
+				"sections_id"
+			],
+			"APPLY": [
+				{
+					"maxAvg": {
+						"MAX": "sections_avg"
+					}
+				},
+				{
+					"minAvg": {
+						"MIN": "sections_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

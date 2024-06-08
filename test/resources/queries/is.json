@@ -1,0 +1,124 @@
+{
+	"title": "In sections dataset sections, find entries whose Instructor is \"feeley, michael\"; show ID, Average, Department and Pass; sort in ascending order by Pass.",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_instructor": "feeley, michael"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_avg",
+				"sections_dept",
+				"sections_pass"
+			],
+			"ORDER": "sections_pass"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "210",
+			"sections_avg": 81.5,
+			"sections_dept": "cpsc",
+			"sections_pass": 21
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 77.39,
+			"sections_dept": "cpsc",
+			"sections_pass": 40
+		},
+		{
+			"sections_id": "313",
+			"sections_avg": 79.76,
+			"sections_dept": "cpsc",
+			"sections_pass": 41
+		},
+		{
+			"sections_id": "313",
+			"sections_avg": 82.27,
+			"sections_dept": "cpsc",
+			"sections_pass": 62
+		},
+		{
+			"sections_id": "313",
+			"sections_avg": 75.15,
+			"sections_dept": "cpsc",
+			"sections_pass": 64
+		},
+		{
+			"sections_id": "210",
+			"sections_avg": 70.83,
+			"sections_dept": "cpsc",
+			"sections_pass": 74
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 74.52,
+			"sections_dept": "cpsc",
+			"sections_pass": 80
+		},
+		{
+			"sections_id": "313",
+			"sections_avg": 74.26,
+			"sections_dept": "cpsc",
+			"sections_pass": 85
+		},
+		{
+			"sections_id": "313",
+			"sections_avg": 72.86,
+			"sections_dept": "cpsc",
+			"sections_pass": 88
+		},
+		{
+			"sections_id": "210",
+			"sections_avg": 71.03,
+			"sections_dept": "cpsc",
+			"sections_pass": 88
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 75.98,
+			"sections_dept": "cpsc",
+			"sections_pass": 95
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 74.97,
+			"sections_dept": "cpsc",
+			"sections_pass": 100
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 75.68,
+			"sections_dept": "cpsc",
+			"sections_pass": 125
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 71.89,
+			"sections_dept": "cpsc",
+			"sections_pass": 134
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 74.22,
+			"sections_dept": "cpsc",
+			"sections_pass": 140
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 75.25,
+			"sections_dept": "cpsc",
+			"sections_pass": 148
+		},
+		{
+			"sections_id": "213",
+			"sections_avg": 70.53,
+			"sections_dept": "cpsc",
+			"sections_pass": 155
+		}
+	]
+}

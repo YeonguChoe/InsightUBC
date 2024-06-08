@@ -1,0 +1,521 @@
+{
+	"title": "In sections dataset sections grouped by UUID, find entries whose Pass is greater than 200 and Audit is greater than 2; show UUID, max and maxpass, where max is the MAX of Average and maxpass is the MAX of Pass.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT": {
+						"sections_pass": 200
+					}
+				},
+				{
+					"GT": {
+						"sections_audit": 2
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_uuid",
+				"max",
+				"maxpass"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_uuid"
+			],
+			"APPLY": [
+				{
+					"max": {
+						"MAX": "sections_avg"
+					}
+				},
+				{
+					"maxpass": {
+						"MAX": "sections_pass"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_uuid": "46",
+			"max": 71.77,
+			"maxpass": 285
+		},
+		{
+			"sections_uuid": "709",
+			"max": 71.13,
+			"maxpass": 223
+		},
+		{
+			"sections_uuid": "711",
+			"max": 71.25,
+			"maxpass": 661
+		},
+		{
+			"sections_uuid": "747",
+			"max": 74.22,
+			"maxpass": 673
+		},
+		{
+			"sections_uuid": "5087",
+			"max": 70.67,
+			"maxpass": 255
+		},
+		{
+			"sections_uuid": "7005",
+			"max": 81.79,
+			"maxpass": 552
+		},
+		{
+			"sections_uuid": "7071",
+			"max": 81.89,
+			"maxpass": 245
+		},
+		{
+			"sections_uuid": "12283",
+			"max": 72.19,
+			"maxpass": 278
+		},
+		{
+			"sections_uuid": "12747",
+			"max": 70.04,
+			"maxpass": 209
+		},
+		{
+			"sections_uuid": "14435",
+			"max": 70.37,
+			"maxpass": 367
+		},
+		{
+			"sections_uuid": "17949",
+			"max": 79.45,
+			"maxpass": 510
+		},
+		{
+			"sections_uuid": "19599",
+			"max": 70,
+			"maxpass": 1087
+		},
+		{
+			"sections_uuid": "19603",
+			"max": 69.54,
+			"maxpass": 1147
+		},
+		{
+			"sections_uuid": "20916",
+			"max": 72.39,
+			"maxpass": 231
+		},
+		{
+			"sections_uuid": "21907",
+			"max": 68.98,
+			"maxpass": 1827
+		},
+		{
+			"sections_uuid": "22846",
+			"max": 70.52,
+			"maxpass": 240
+		},
+		{
+			"sections_uuid": "23198",
+			"max": 75.56,
+			"maxpass": 204
+		},
+		{
+			"sections_uuid": "23836",
+			"max": 70.38,
+			"maxpass": 491
+		},
+		{
+			"sections_uuid": "23848",
+			"max": 70.75,
+			"maxpass": 271
+		},
+		{
+			"sections_uuid": "25445",
+			"max": 73.93,
+			"maxpass": 249
+		},
+		{
+			"sections_uuid": "26154",
+			"max": 76.89,
+			"maxpass": 218
+		},
+		{
+			"sections_uuid": "26467",
+			"max": 74.66,
+			"maxpass": 228
+		},
+		{
+			"sections_uuid": "26988",
+			"max": 74.73,
+			"maxpass": 435
+		},
+		{
+			"sections_uuid": "27861",
+			"max": 69.05,
+			"maxpass": 355
+		},
+		{
+			"sections_uuid": "28369",
+			"max": 72.26,
+			"maxpass": 262
+		},
+		{
+			"sections_uuid": "29834",
+			"max": 70.34,
+			"maxpass": 499
+		},
+		{
+			"sections_uuid": "31798",
+			"max": 78.54,
+			"maxpass": 553
+		},
+		{
+			"sections_uuid": "33178",
+			"max": 68.75,
+			"maxpass": 330
+		},
+		{
+			"sections_uuid": "33183",
+			"max": 71.22,
+			"maxpass": 1245
+		},
+		{
+			"sections_uuid": "33419",
+			"max": 80.04,
+			"maxpass": 449
+		},
+		{
+			"sections_uuid": "33430",
+			"max": 79.32,
+			"maxpass": 214
+		},
+		{
+			"sections_uuid": "34326",
+			"max": 75.71,
+			"maxpass": 391
+		},
+		{
+			"sections_uuid": "37831",
+			"max": 71.02,
+			"maxpass": 851
+		},
+		{
+			"sections_uuid": "38510",
+			"max": 76.61,
+			"maxpass": 1470
+		},
+		{
+			"sections_uuid": "39928",
+			"max": 79.25,
+			"maxpass": 426
+		},
+		{
+			"sections_uuid": "41563",
+			"max": 79.49,
+			"maxpass": 223
+		},
+		{
+			"sections_uuid": "42130",
+			"max": 71.78,
+			"maxpass": 1126
+		},
+		{
+			"sections_uuid": "43935",
+			"max": 71.07,
+			"maxpass": 529
+		},
+		{
+			"sections_uuid": "43963",
+			"max": 76.95,
+			"maxpass": 737
+		},
+		{
+			"sections_uuid": "44152",
+			"max": 75.65,
+			"maxpass": 689
+		},
+		{
+			"sections_uuid": "48921",
+			"max": 71.05,
+			"maxpass": 292
+		},
+		{
+			"sections_uuid": "49158",
+			"max": 65.74,
+			"maxpass": 314
+		},
+		{
+			"sections_uuid": "52864",
+			"max": 73.4,
+			"maxpass": 372
+		},
+		{
+			"sections_uuid": "52873",
+			"max": 73.59,
+			"maxpass": 214
+		},
+		{
+			"sections_uuid": "52888",
+			"max": 73.24,
+			"maxpass": 375
+		},
+		{
+			"sections_uuid": "52900",
+			"max": 72.86,
+			"maxpass": 336
+		},
+		{
+			"sections_uuid": "53076",
+			"max": 76.99,
+			"maxpass": 383
+		},
+		{
+			"sections_uuid": "53726",
+			"max": 71.83,
+			"maxpass": 581
+		},
+		{
+			"sections_uuid": "57720",
+			"max": 71.19,
+			"maxpass": 655
+		},
+		{
+			"sections_uuid": "57757",
+			"max": 75.06,
+			"maxpass": 217
+		},
+		{
+			"sections_uuid": "57758",
+			"max": 72.72,
+			"maxpass": 227
+		},
+		{
+			"sections_uuid": "57760",
+			"max": 73.86,
+			"maxpass": 662
+		},
+		{
+			"sections_uuid": "58172",
+			"max": 73.51,
+			"maxpass": 400
+		},
+		{
+			"sections_uuid": "58181",
+			"max": 75.17,
+			"maxpass": 271
+		},
+		{
+			"sections_uuid": "58884",
+			"max": 72.73,
+			"maxpass": 274
+		},
+		{
+			"sections_uuid": "60580",
+			"max": 79.54,
+			"maxpass": 435
+		},
+		{
+			"sections_uuid": "60639",
+			"max": 79.71,
+			"maxpass": 210
+		},
+		{
+			"sections_uuid": "60829",
+			"max": 75.16,
+			"maxpass": 223
+		},
+		{
+			"sections_uuid": "66273",
+			"max": 74.04,
+			"maxpass": 211
+		},
+		{
+			"sections_uuid": "67250",
+			"max": 69.97,
+			"maxpass": 273
+		},
+		{
+			"sections_uuid": "67251",
+			"max": 69.97,
+			"maxpass": 273
+		},
+		{
+			"sections_uuid": "67396",
+			"max": 71.57,
+			"maxpass": 534
+		},
+		{
+			"sections_uuid": "67408",
+			"max": 70.95,
+			"maxpass": 310
+		},
+		{
+			"sections_uuid": "67416",
+			"max": 74.24,
+			"maxpass": 216
+		},
+		{
+			"sections_uuid": "67424",
+			"max": 70.56,
+			"maxpass": 218
+		},
+		{
+			"sections_uuid": "69434",
+			"max": 71.74,
+			"maxpass": 495
+		},
+		{
+			"sections_uuid": "69860",
+			"max": 76.22,
+			"maxpass": 353
+		},
+		{
+			"sections_uuid": "69864",
+			"max": 74.15,
+			"maxpass": 324
+		},
+		{
+			"sections_uuid": "71313",
+			"max": 70.74,
+			"maxpass": 346
+		},
+		{
+			"sections_uuid": "73745",
+			"max": 71.77,
+			"maxpass": 721
+		},
+		{
+			"sections_uuid": "73916",
+			"max": 71.95,
+			"maxpass": 515
+		},
+		{
+			"sections_uuid": "74373",
+			"max": 71.81,
+			"maxpass": 376
+		},
+		{
+			"sections_uuid": "74383",
+			"max": 73.46,
+			"maxpass": 353
+		},
+		{
+			"sections_uuid": "77620",
+			"max": 74.46,
+			"maxpass": 376
+		},
+		{
+			"sections_uuid": "77645",
+			"max": 73.07,
+			"maxpass": 375
+		},
+		{
+			"sections_uuid": "78423",
+			"max": 72.96,
+			"maxpass": 488
+		},
+		{
+			"sections_uuid": "79254",
+			"max": 73.56,
+			"maxpass": 236
+		},
+		{
+			"sections_uuid": "79258",
+			"max": 71.52,
+			"maxpass": 279
+		},
+		{
+			"sections_uuid": "80013",
+			"max": 68.16,
+			"maxpass": 299
+		},
+		{
+			"sections_uuid": "81516",
+			"max": 74.82,
+			"maxpass": 813
+		},
+		{
+			"sections_uuid": "81593",
+			"max": 76.42,
+			"maxpass": 512
+		},
+		{
+			"sections_uuid": "81913",
+			"max": 76.19,
+			"maxpass": 223
+		},
+		{
+			"sections_uuid": "82161",
+			"max": 76.97,
+			"maxpass": 229
+		},
+		{
+			"sections_uuid": "82162",
+			"max": 76.97,
+			"maxpass": 229
+		},
+		{
+			"sections_uuid": "83395",
+			"max": 72.63,
+			"maxpass": 736
+		},
+		{
+			"sections_uuid": "83643",
+			"max": 72.81,
+			"maxpass": 634
+		},
+		{
+			"sections_uuid": "83863",
+			"max": 75.29,
+			"maxpass": 712
+		},
+		{
+			"sections_uuid": "84062",
+			"max": 75.64,
+			"maxpass": 214
+		},
+		{
+			"sections_uuid": "89699",
+			"max": 66.91,
+			"maxpass": 532
+		},
+		{
+			"sections_uuid": "90963",
+			"max": 70.77,
+			"maxpass": 379
+		},
+		{
+			"sections_uuid": "90972",
+			"max": 74.51,
+			"maxpass": 545
+		},
+		{
+			"sections_uuid": "93525",
+			"max": 70.66,
+			"maxpass": 500
+		},
+		{
+			"sections_uuid": "93536",
+			"max": 72.07,
+			"maxpass": 204
+		},
+		{
+			"sections_uuid": "96388",
+			"max": 70.63,
+			"maxpass": 559
+		},
+		{
+			"sections_uuid": "98117",
+			"max": 70.12,
+			"maxpass": 458
+		}
+	]
+}

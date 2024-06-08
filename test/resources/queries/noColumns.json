@@ -1,0 +1,16 @@
+{
+	"title": "NoColumns",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_instructor": "*Jamieson*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

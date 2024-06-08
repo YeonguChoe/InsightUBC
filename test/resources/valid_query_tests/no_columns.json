@@ -1,0 +1,15 @@
+{
+	"title": "should return false on queries with no COLUMNS key", 
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "c*"
+			}
+		},
+		"OPTIONS": {
+			"ORDER": "sections_dept"
+		}
+	},
+	"errorExpected": false,
+	"expected": false
+}

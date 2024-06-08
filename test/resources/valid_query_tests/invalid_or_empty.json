@@ -1,0 +1,17 @@
+{
+	"title": "should return false with an empty filter list in OR",
+	"input": {
+		"WHERE": {
+			"OR": []
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": false
+}

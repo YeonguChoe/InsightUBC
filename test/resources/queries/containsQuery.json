@@ -1,0 +1,20 @@
+{
+	"title": "ContainsQuery",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "*cpc*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_id",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

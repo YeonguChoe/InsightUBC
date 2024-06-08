@@ -1,0 +1,68 @@
+{
+	"title": "In sections dataset sections, find entries whose ID begins with \"3\" and Average is greater than 96; show ID and Department.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_id": "3*"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "329",
+			"sections_dept": "adhe"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse"
+		},
+		{
+			"sections_id": "333",
+			"sections_dept": "fipr"
+		},
+		{
+			"sections_id": "333",
+			"sections_dept": "fipr"
+		},
+		{
+			"sections_id": "393",
+			"sections_dept": "mine"
+		},
+		{
+			"sections_id": "300",
+			"sections_dept": "spph"
+		},
+		{
+			"sections_id": "300",
+			"sections_dept": "spph"
+		}
+	]
+}

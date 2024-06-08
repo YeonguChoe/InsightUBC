@@ -1,0 +1,40 @@
+{
+	"title": "In rooms dataset rooms grouped by Full Name, Short Name and Seats, find entries whose Full Name includes \"\"; show Full Name, Short Name, Seats and maxLon, where maxLon is the MAX of Full Name; sort in descending order by Seats.",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_fullname": "**"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"rooms_seats",
+				"maxLon"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"rooms_seats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"rooms_seats"
+			],
+			"APPLY": [
+				{
+					"maxLon": {
+						"MAX": "rooms_fullname"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

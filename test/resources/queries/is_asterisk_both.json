@@ -1,0 +1,259 @@
+{
+	"title": "In sections dataset sections, find entries whose Department includes \"p\" and Average is greater than 96; show ID, Department and UUID.",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "*p*"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 96
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_id",
+				"sections_dept",
+				"sections_uuid"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_id": "574",
+			"sections_dept": "cnps",
+			"sections_uuid": "26777"
+		},
+		{
+			"sections_id": "574",
+			"sections_dept": "cnps",
+			"sections_uuid": "87779"
+		},
+		{
+			"sections_id": "574",
+			"sections_dept": "cnps",
+			"sections_uuid": "87780"
+		},
+		{
+			"sections_id": "584",
+			"sections_dept": "cnps",
+			"sections_uuid": "33373"
+		},
+		{
+			"sections_id": "584",
+			"sections_dept": "cnps",
+			"sections_uuid": "33375"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "3148"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "3149"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "44372"
+		},
+		{
+			"sections_id": "312",
+			"sections_dept": "epse",
+			"sections_uuid": "44373"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "33779"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "33780"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "33781"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "35870"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "35871"
+		},
+		{
+			"sections_id": "421",
+			"sections_dept": "epse",
+			"sections_uuid": "76254"
+		},
+		{
+			"sections_id": "432",
+			"sections_dept": "epse",
+			"sections_uuid": "38152"
+		},
+		{
+			"sections_id": "432",
+			"sections_dept": "epse",
+			"sections_uuid": "38153"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "3181"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "6320"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "28943"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "29255"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "29256"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "44816"
+		},
+		{
+			"sections_id": "449",
+			"sections_dept": "epse",
+			"sections_uuid": "44817"
+		},
+		{
+			"sections_id": "505",
+			"sections_dept": "epse",
+			"sections_uuid": "76285"
+		},
+		{
+			"sections_id": "519",
+			"sections_dept": "epse",
+			"sections_uuid": "49677"
+		},
+		{
+			"sections_id": "519",
+			"sections_dept": "epse",
+			"sections_uuid": "49678"
+		},
+		{
+			"sections_id": "526",
+			"sections_dept": "epse",
+			"sections_uuid": "44426"
+		},
+		{
+			"sections_id": "526",
+			"sections_dept": "epse",
+			"sections_uuid": "44427"
+		},
+		{
+			"sections_id": "534",
+			"sections_dept": "epse",
+			"sections_uuid": "76309"
+		},
+		{
+			"sections_id": "534",
+			"sections_dept": "epse",
+			"sections_uuid": "76310"
+		},
+		{
+			"sections_id": "534",
+			"sections_dept": "epse",
+			"sections_uuid": "76311"
+		},
+		{
+			"sections_id": "549",
+			"sections_dept": "epse",
+			"sections_uuid": "3228"
+		},
+		{
+			"sections_id": "596",
+			"sections_dept": "epse",
+			"sections_uuid": "86962"
+		},
+		{
+			"sections_id": "596",
+			"sections_dept": "epse",
+			"sections_uuid": "86963"
+		},
+		{
+			"sections_id": "606",
+			"sections_dept": "epse",
+			"sections_uuid": "86966"
+		},
+		{
+			"sections_id": "333",
+			"sections_dept": "fipr",
+			"sections_uuid": "75176"
+		},
+		{
+			"sections_id": "333",
+			"sections_dept": "fipr",
+			"sections_uuid": "75177"
+		},
+		{
+			"sections_id": "595",
+			"sections_dept": "plan",
+			"sections_uuid": "57511"
+		},
+		{
+			"sections_id": "595",
+			"sections_dept": "plan",
+			"sections_uuid": "57512"
+		},
+		{
+			"sections_id": "549",
+			"sections_dept": "psyc",
+			"sections_uuid": "54846"
+		},
+		{
+			"sections_id": "200",
+			"sections_dept": "spph",
+			"sections_uuid": "65066"
+		},
+		{
+			"sections_id": "300",
+			"sections_dept": "spph",
+			"sections_uuid": "65069"
+		},
+		{
+			"sections_id": "300",
+			"sections_dept": "spph",
+			"sections_uuid": "65070"
+		},
+		{
+			"sections_id": "515",
+			"sections_dept": "spph",
+			"sections_uuid": "68029"
+		},
+		{
+			"sections_id": "515",
+			"sections_dept": "spph",
+			"sections_uuid": "68030"
+		}
+	]
+}

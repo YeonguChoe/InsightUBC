@@ -1,0 +1,20 @@
+{
+	"title": "In sections dataset sections, find entries whose Average is greater than 97; show Department, Average and sections_tier_eight; sort in ascending order by Average.",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg",
+				"sections_tier_eight"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
